@@ -12,8 +12,8 @@ class PosOrder(models.Model):
     def pos_fixes(self, ids):
         move_line_obj = self.env['account.move.line']
         for order in self.browse(ids):
-            if order.state == 'invoiced' or order.invoice_id:
-                continue
+#             if order.state == 'invoiced' or order.invoice_id:
+#                 continue
 
             company_id = order.company_id.id
             session = order.session_id
